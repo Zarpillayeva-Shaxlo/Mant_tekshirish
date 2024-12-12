@@ -23,8 +23,8 @@ if st.button("O'xshashlikni tekshirish"):
     if response.status_code == requests.codes.ok:
         # Display the result
         result = response.json()
-        similarity = result.get('o"xshashlik', 'N/A')
-        st.success(f"O'xshashlik balli: {similarity}")
+        similarity = result.get('similarity', 'N/A')
+        st.success(f"The similarity score is: {similarity}")
     else:
         # Display error message
         st.error(f"Error {response.status_code}: {response.text}")
