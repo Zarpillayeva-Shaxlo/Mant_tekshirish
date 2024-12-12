@@ -15,7 +15,7 @@ text_2 = st.text_area("Ikkinchi matnni kiriting:", "Bu faqat boshqa misol matn."
 
 # Button to submit
 if st.button("O'xshashlikni tekshirish"):
-    body = {'mant_1': text_1, 'matn_2': text_2}
+    body = {'text_1': text_1, 'text_2': text_2}
 
     # Make the API request
     response = requests.post(API_URL, headers={'X-Api-Key': API_KEY}, json=body)
